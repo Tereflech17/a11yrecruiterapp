@@ -1,0 +1,64 @@
+
+<html lang="en">
+    <head>
+        <title>a11yRecruiter</title>
+        <!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> 
+        <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+        
+    </head>
+    <body>
+        <!--<div class="nav__icon">-->
+        <!--   <div class="home__icon">-->
+        <!--       a11yRecruiter-->
+        <!--   </div>-->
+        <!--</div>-->
+        <!--<div class="navigation">-->
+        <!--    <nav class="navigation__nav">-->
+        <!--        <ul class="navigation__list">-->
+                  <!--if(!currentUser){  %> -->
+         <!--            <li class="navigation__item"><a class="navigation__link" href="/jobs">Jobs</a></li>-->
+         <!--            <li class="navigation__item"><a class="navigation__link" href="/login">Login</a></li>-->
+         <!--            <li class="navigation__item"><a class="navigation__link" href="/register">SignUp</a></li>-->
+                   <!-- else{ %>-->
+        <!--            <li class="navigation__item"><a class="navigation__link" href="/login">Signed in as </a></li>-->
+        <!--            <li class="navigation__item"><a class="navigation__link" href="/register">Logout</a></li>-->
+                    <!--%>-->
+        <!--        </ul>-->
+        <!--    </nav>-->
+        <!--</div>-->
+        
+        <header>
+                    <nav class = "navbar navbar-default mediumBlue navbar-fixed-top" role = "navigation">
+                        <div class = "container">
+                            <div class = "navbar-header">
+                                
+                                    <a class="navbar-brand" href="/jobs"><span class="subhead">A11y Recruiters</span></a>
+                                <button type = "button" class = "navbar-toggle collapsed" data-toggle = "collapse" data-target = "#collapse">
+                                    <span class= "sr-only">Toggle navigation </span>
+                                    <span class="iconbar"></span>
+                                    <span class="iconbar"></span>
+                                    <span class="iconbar"></span>
+                                   
+                                </button>
+                               
+                            </div><!-- navbar-header -->
+                            <div class="collapse navbar-collapse" id="collapse">
+                              <ul class="nav navbar-nav navbar-right">
+                                  <%if(!currentUser) { %>
+                                    <li id = "darkBlue"><a href ="/about" id = "bootstrap-overrides">About Us</a></li>
+                                <li><a href="#" id = "bootstrap-overrides">Employers</a>
+                                </li>
+                                <li><a href="/login" id = "bootstrap-overrides">Login</a></li>
+                                <li><a href="/register" id = "bootstrap-overrides">SignUp</a></li>
+                                <% }else{ %>
+                                    <li><a href="#"></a>Singed In as <%=currentUser.username %></li>
+                                    <li><a href="/logout" id = "bootstrap-overrides">Logout</a></li>
+                                <% } %>
+                               </ul>       
+                            </div><!-- collapse navbar-collapse -->
+                            </div><!-- container -->
+                    </nav>
+                </header>
+        
+    

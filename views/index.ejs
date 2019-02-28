@@ -1,0 +1,66 @@
+<% include ./partials/header %>
+ <div class="header_box">
+   <%if(!currentUser){ %>
+    <header class="header">
+      <div class="row">
+                <div class="content-box header__text-box">
+                    <h1 class="heading-primary heading-primary--main"> <Span class="sub-head--text">A11y </Span>Recruiter.
+                    </h1>
+                </div>
+            </div>
+    </header><% } else { %>
+      <header class="header-info">
+      <div class="user-info">
+                <div class="content-box header__text-box">
+                   <div class="text-color"><span class="paragraph">Welcome </span> <h3 class="heading-secondary"><%=currentUser.username %></h3></div>
+                </div>
+            </div>
+    </header><% } %>
+ </div>
+ <div class="jobs">
+   <div class="center-text margin-bottom-medium">
+      <h1 class="heading-primary--main">Job Openings</h1>
+   </div>
+   
+   <div class"job-summary">
+     <div class="row">
+      <% jobs.forEach(function(job){ %>
+       <div class="col-1-of-3">
+         <div class="feature-box">
+             <h2><%=job.title %></h2>
+             <p></p><%=job.company %></p>
+             <p><%= job.type %></p>
+            <p><%= job.location %></p>
+            <p><%= job.applydate %></p>
+            <a class="ui violet big basic button" href="/jobs/<%=job._id %>">Read More</a>
+         </div>
+       </div>
+       <!-- <div class="col-1-of-3">-->
+       <!--  <div class="feature-box">-->
+       <!--      <h2><%=job.title %></h2>-->
+       <!--      <p></p><%=job.company %></p>-->
+       <!--      <p><%= job.type %></p>-->
+       <!--     <p><%= job.location %></p>-->
+       <!--     <p><%= job.applydate %></p>-->
+       <!--     <a class="ui violet big basic button" href="/jobs/<%=job._id %>">Read More</a>-->
+       <!--  </div>-->
+       <!--</div>-->
+       <!-- <div class="col-1-of-3">-->
+       <!--  <div class="feature-box">-->
+       <!--      <h2><%=job.title %></h2>-->
+       <!--      <p></p><%=job.company %></p>-->
+       <!--      <p><%= job.type %></p>-->
+       <!--     <p><%= job.location %></p>-->
+       <!--     <p><%= job.applydate %></p>-->
+       <!--     <a class="ui violet big basic button" href="/jobs/<%=job._id %>">Read More</a>-->
+       <!--  </div>-->
+       <!--</div>-->
+        <% }) %>
+     </div>
+    
+   </div>
+   
+ </div>
+  
+  
+<% include ./partials/footer%>

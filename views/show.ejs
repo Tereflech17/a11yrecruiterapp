@@ -1,0 +1,56 @@
+<%include ./partials/header %>
+<div class="job-details">
+    <div class="row">
+         <div class="col-1-of-4">
+             <h2 class="heading-secondary">Job Details</h2>
+         </div>
+         
+        <div class="col-3-of-4">
+            <div class="feature-box">
+                <div class="summary">
+                 <p><span><%= job.company %></span></p> 
+                  <p><span><%= job.type %></span></p>
+                  <p><span><%= job.location %></span></p>
+                  <p><span><%= job.applydate %></span></p>
+                </div>
+                <div class="margin-top-big description">
+                    <h3 class="heading-tertiary">Job Description</h3>
+                    <p class="paragraph"><span><%= job.description %></span></p>
+                </div>
+                <div class=" margin-top-big requirements">
+                    <h3 class="heading-tertiary">Job Requirements</h3>
+                     <p class="paragraph"><span><%= job.requirements %></span></p>
+                </div>
+                <div class="margin-top-mini button">
+                   <button<a href="#">Apply Now</a></button> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="ui text main container segment">-->
+<!--    <div class="ui huge header"><%= job.title%></div>-->
+<!--    <div class="ui top attached">-->
+<!--        <div class="item">-->
+<!--              <div class="content">-->
+<!--                 <div><span><%= job.company %></span></div> -->
+<!--                  <div><span><%= job.type %></span></div>-->
+<!--                  <div><span><%= job.location %></span></div>-->
+<!--                  <div><span><%= job.applydate %></span></div>-->
+<!--              </div>-->
+<!--              <div class="content">-->
+<!--                <div class="description">-->
+<!--                    <h2>Job Description</h2>-->
+<!--                    <span><%= job.description %></span></div>-->
+<!--                <div class="description">-->
+<!--                    <h2>Job Requirements</h2>-->
+<!--                    <span><%= job.requirements %></span></div>-->
+<!--              </div>-->
+<!--              <div>-->
+<!--               <a href="#" class="ui violet big basic button">Apply Now</a>-->
+<!--              </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<%include ./partials/footer %>
